@@ -165,7 +165,7 @@ function processContains(item, list, callback) {
  */
 function processDuplicateFree(list, callback) {
     /* CODE HERE ONLY AFTER COMPLETING ALL OTHER TASKS */
-    var temp = [];
+    let temp = [];
     temp = list.slice();
     let filteredArr = [];
     let uniqueArr = [];
