@@ -223,8 +223,8 @@ function getFullNames(runners) {
  */
 function firstNamesAllCaps(runners) {
     /* CODE HERE */
-    let runnersUppercaseNames = [];
-    runnersUppercaseNames = runners.map(item => item.first_name.toUpperCase().toString());
+    const runnersUppercaseNames =
+        runners.map(item => item.first_name.toUpperCase().toString());
     return runnersUppercaseNames;
 
 }
@@ -244,13 +244,7 @@ function firstNamesAllCaps(runners) {
  */
 function getRunnersByTShirtSize(runners, tShirtSize) {
     /* CODE HERE */
-    let tShirtSizeRunners = [];
-
-    // tShirtSizeRunners = runners.filter(runner => runner.shirt_size === tShirtSize);
-    tShirtSizeRunners = runners.filter(function(runner) {
-        return runner.shirt_size === tShirtSize;
-    });
-
+    const tShirtSizeRunners = runners.filter(runner => runner.shirt_size === tShirtSize);
 
     return tShirtSizeRunners;
 }
@@ -267,9 +261,8 @@ function getRunnersByTShirtSize(runners, tShirtSize) {
  */
 function tallyUpDonations(runners) {
     /* CODE HERE */
-    const tallySum = runners.reduce(function(accumulator, item) {
-        return accumulator + item.donation;
-    }, 0);
+    const tallySum = runners.reduce((accumulator, item) =>
+        accumulator + item.donation, 0);
     return tallySum;
     //7043
 }
